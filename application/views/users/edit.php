@@ -30,6 +30,17 @@
                   <label>Email</label>
                   <textarea class="form-control" name="email" placeholder="Insert Email" rows="4"><?php echo $data_user->email ?></textarea>
                 </div>
+
+                <div class="form-group">
+                  <label>Image</label>
+                  <b>Upload File :</b>
+                  <input  class="form-control"  type="file" name="image" accept="image/*">
+                  
+                </div>
+
+                <div class="form-group col-lg-10" style="background-color:#D3D3D3;text-align:center;">
+                  <img style="margin:4px;" src="<?= base_url($data_user->image) ?>" alt="User Image" style="width:70px;height:70px;">                  
+                </div>
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>

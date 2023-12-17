@@ -32,7 +32,7 @@
                 <div class="form-group">
                   <label>Image</label>
                   <b>Upload File :</b>
-        <input  class="form-control"  type="file" name="image" accept="image/*">
+                    <input  class="form-control"  type="file" name="image" accept="image/*">
                 </div>
                 
                 <button type="submit" class="btn btn-success">SIMPAN</button>

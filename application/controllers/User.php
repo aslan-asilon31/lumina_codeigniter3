@@ -11,8 +11,13 @@ class User extends CI_Controller {
         $data = array(
             'data_user' => $this->user_m->get_user()->result()
         );
+
+
+        $data['content'] =   $this->load->view('users/index', $data, true);
+        $this->load->view('template/backend', $data);
+
         //load view
-        $this->load->view('users/index', $data);
+        // $this->load->view('users/index', $data);
     }
 
     public function tambah()
@@ -42,7 +47,6 @@ class User extends CI_Controller {
 
         $Path = "upload/";
         $ImagePath = $Path . $name. "_logoku.png";
-        // print_r($ImagePath);exit;
         move_uploaded_file($base64Gambar, $ImagePath);
         
         $data = array(
@@ -51,9 +55,6 @@ class User extends CI_Controller {
             'email'       => $email,    
             'image'       => $ImagePath    
         );
-        // print_r($data);exit;
-        
-        // print_r($data);exit;
 
         //insert data via model
         $this->user_m->simpan_user($data);
@@ -85,16 +86,36 @@ class User extends CI_Controller {
         //load model
         $this->load->model('user_m');
 
+
+        // $config['upload_path']   = './upload/';
+        // $config['allowed_types'] = 'gif|jpg|png';
+        // $config['max_size']      = 1000;
+        // $config['max_width']     = 1024;
+        // $config['max_height']    = 768;
+
+
+        // print_r($_FILES["image"]);exit;
+        
         //get data dari form
         // $user_id= $this->input->post("user_id");
         $user_id['user_id'] = $this->input->post("user_id");
         $name    = $this->input->post('name');
         $email            = $this->input->post('email');
+        $base64Gambar            = $this->input->post('image');
+        // $base64Gambar = $_FILES["image"]["tmp_name"];
+        // print_r($name);exit;
+        // print_r($image);exit;
 
+        $Path = "upload/";
+        $ImagePath = $Path . $name. "_logoku.png";
 
+        move_uploaded_file($base64Gambar, $ImagePath);
+        // print_r($ImagePath);exit;
+        
         $data = array(
-            'name' => $name,
-            'email'       => $email    
+            'name'         => $name,
+            'email'       => $email,
+            'image'       => $ImagePath  
         );
 
         //update via model    
