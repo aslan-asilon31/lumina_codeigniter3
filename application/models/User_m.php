@@ -8,7 +8,7 @@ class user_m extends CI_Model {
         //select semua data user
         $this->db->select('*');
         $this->db->from('users');
-        $this->db->order_by('id', 'DESC');
+        $this->db->order_by('user_id', 'DESC');
         return $this->db->get();
     }
 

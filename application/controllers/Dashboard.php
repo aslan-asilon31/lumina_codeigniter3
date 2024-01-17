@@ -7,9 +7,9 @@ class Dashboard extends CI_Controller {
     {
 
         $data = array(
-            // 'data_user' => $this->user_m->get_user()->result()
+            'title' => 'Dashboard Page'
         );
-        
+
         $data['content'] =   $this->load->view('dashboard/index', $data, true);
         $this->load->view('template/backend', $data, true);
 

@@ -3,12 +3,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller {
 
+
+    public function __construct() {
+
+        parent::__construct();
+        $this->load->model('user_m');
+        $this->load->database();
+  
+     }
+
     public function index()
     {
-        //load model
-        $this->load->model('user_m');
-
         $data = array(
+            'title' => 'User Page',
             'data_user' => $this->user_m->get_user()->result()
         );
 
@@ -16,8 +23,60 @@ class User extends CI_Controller {
         $data['content'] =   $this->load->view('users/index', $data, true);
         $this->load->view('template/backend', $data);
 
-        //load view
-        // $this->load->view('users/index', $data);
+    }
+
+    // function get_user_json() { //data data produk by JSON object
+    //     header('Content-Type: application/json');
+    //     $query = $this->db->query('SELECT * FROM users ORDER BY user_id DESC');
+    //     return $query->result_array();
+    //     // echo $data;
+    // }
+
+    public function get_user_json()
+    {
+ 
+       $draw = intval($this->input->get("draw"));
+       $start = intval($this->input->get("start"));
+       $length = intval($this->input->get("length"));
+ 
+       $query = $this->db->get("users");
+ 
+ 
+       $data = [];
+ 
+ 
+       foreach($query->result() as $r) {
+ 
+            $data[] = array(
+ 
+                 $r->id,
+ 
+                 $r->name,
+ 
+                 $r->email
+ 
+            );
+ 
+       }
+ 
+ 
+       $result = array(
+ 
+                "draw" => $draw,
+ 
+                  "recordsTotal" => $query->num_rows(),
+ 
+                  "recordsFiltered" => $query->num_rows(),
+ 
+                  "data" => $data
+ 
+             );
+ 
+ 
+       echo json_encode($result);
+ 
+       exit();
+ 
     }
 
     public function tambah()
