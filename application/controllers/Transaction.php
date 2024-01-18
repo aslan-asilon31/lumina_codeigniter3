@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Transaction extends CI_Controller {
 
 
+<<<<<<< HEAD
 
     public function __construct() {
 
@@ -25,4 +26,13 @@ class Transaction extends CI_Controller {
 
     }
 
+=======
+    public function __construct() {
+
+        parent::__construct();
+        $this->load->model('order_m');
+        $this->load->database();
+
+     }
+>>>>>>> 5ab966219c90f19bb8907f4137639b85aca73e7b
 }
