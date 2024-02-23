@@ -1,3 +1,5 @@
+
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
@@ -29,15 +31,7 @@ const linkAction = () => {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-const scrollHeader = () => {
-    const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the bg-header class to the header tag
-    this.scrollY >= 50
-        ? header.classList.add('bg-header')
-        : header.classList.remove('bg-header')
-}
-window.addEventListener('scroll', scrollHeader)
+
 
 /*=============== SWIPER POPULAR ===============*/
 const popularSwiper = new Swiper('.popular__content', {
@@ -99,12 +93,53 @@ const toggleItem = (item) => {
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up')
+    const cartIcon = document.getElementById('cart-icon');
+    const cartCount = document.getElementById('cart-count');
+    const dropdownProfileName = document.getElementById('dropdown-profile-name');
+
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-    this.scrollY >= 350
-        ? scrollUp.classList.add('show-scroll')
-        : scrollUp.classList.remove('show-scroll')
+    // this.scrollY >= 350
+    //     ? scrollUp.classList.add('show-scroll')
+    //     : scrollUp.classList.remove('show-scroll')
+
+
+    if (this.scrollY >= 350) {
+        scrollUp.classList.add('show-scroll');
+        cartIcon.style.color = 'white';
+        cartCount.style.color = 'white';
+        dropdownProfileName.style.color = 'white';
+    }
 }
 window.addEventListener('scroll', scrollUp)
+
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const scrollHeader = () => {
+    const header = document.getElementById('header')
+    const cartIcon = document.getElementById('cart-icon');
+    const cartCount = document.getElementById('cart-count');
+    const dropdownProfileName = document.getElementById('dropdown-profile-name');
+
+    // When the scroll is greater than 50 viewport height, add the bg-header class to the header tag
+    // this.scrollY >= 50
+    //     ? header.classList.add('bg-header')
+    //     : header.classList.remove('bg-header')
+
+
+    if (this.scrollY >= 50) {
+        header.classList.add('bg-header');
+        cartIcon.style.color = 'black';
+        cartCount.style.color = 'black';
+        dropdownProfileName.style.color = 'black';
+    } else {
+        header.classList.remove('bg-header');
+        cartIcon.style.color = 'white';
+        cartCount.style.color = 'white';
+        dropdownProfileName.style.color = 'white';
+    }
+}
+window.addEventListener('scroll', scrollHeader)
+
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -120,6 +155,7 @@ const scrollActive = () => {
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             sectionsClass.classList.add('active-link')
+
         } else {
             sectionsClass.classList.remove('active-link')
         }
@@ -131,6 +167,11 @@ window.addEventListener('scroll', scrollActive)
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
+const imgLanguageLight = document.getElementById('language-img-light');
+const imgLanguageDark = document.getElementById('language-img-dark');
+
+
+// Initially hide or show the img-language based on the dark theme
 
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
@@ -142,16 +183,29 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moo
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
+
     // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
     themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+
+
+
+    // Initially hide or show the img-language based on the dark theme
+    document.addEventListener('DOMContentLoaded', function() {
+        imgLanguageLight.style.display = selectedTheme === 'dark' ? 'block' : 'none';
+        imgLanguageDark.style.display = selectedTheme === 'dark' ? 'none' : 'block';
+
+    });
+    
 }
+
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
+    
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
@@ -170,3 +224,50 @@ sr.reveal(`.home__content, .popular__container, .products__container, .join__bg,
 sr.reveal(`.home__image`, { origin: 'bottom' })
 sr.reveal(`.choose__image, .features__image`, { origin: 'left' })
 sr.reveal(`.choose__content, .features__content`, { origin: 'right' })
+
+
+
+// Photo Profile=======================================
+
+let profile = document.querySelector('.profile');
+let menu = document.querySelector('.menu');
+
+profile.onclick = function() {
+    menu.classList.toggle('active');
+}
+// End Photo Profile=======================================
+
+
+
+const navItem = document.getElementById('cart-nav-item');
+
+// Add click event to navigate to another page
+navItem.addEventListener('click', function() {
+
+    // Replace 'your_destination_page.html' with the actual page URL you want to navigate to
+    window.location.href = 'cart.html';
+});
+
+
+
+// index.html
+
+
+// end index.html
+
+
+
+// product_detail.html
+
+$(document).ready(function() {
+    $('.product-image-thumb').on('click', function () {
+      var $image_element = $(this).find('img')
+      $('.product-image').prop('src', $image_element.attr('src'))
+      $('.product-image-thumb.active').removeClass('active')
+      $(this).addClass('active')
+    })
+})
+
+
+// end product_detail.html
+

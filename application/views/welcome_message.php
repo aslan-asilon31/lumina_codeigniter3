@@ -6,31 +6,56 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--=============== FAVICON ===============-->
-   <link rel="shortcut icon" href="<?= base_url('assets/frontend/img/favicon.png'); ?>" type="image/x-icon">
+   <link rel="shortcut icon" href="<?= base_url(''); ?>assets/frontend/img/favicon.png" type="image/x-icon">
 
    <!--=============== REMIXICONS ===============-->
    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
    <!--=============== SWIPER CSS ===============-->
-   <link rel="stylesheet" href="<?= base_url('assets/frontend/css/swiper-bundle.min.css'); ?>">
+   <link rel="stylesheet" href="<?= base_url(''); ?>assets/frontend/css/swiper-bundle.min.css">
 
    <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="<?= base_url('assets/frontend/css/styles.css'); ?>">
-   
+   <link rel="stylesheet" href="<?= base_url(''); ?>assets/frontend/css/styles.css">>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
 
    <title>Lumina Shop</title>
+
+<style>
+
+
+</style>
+
+
 </head>
 
 <body>
    <!--==================== HEADER ====================-->
    <header class="header" id="header">
+      <section class="before-nav container d-flex" >
+
+         <li class="nav__item_lang" >
+            <select class="nav__select nav__item_lang ">
+               <option value=""  class="nav__link">English </option>
+               <option value="" class="nav__link">Japanese</option>
+               <option value="" class="nav__link">Indonesian</option>
+            </select>
+         </li>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <li class="nav__item_lang" >
+            <span>indonesia</span>
+         </li>
+
+
+      </section>
       <nav class="nav container">
          <a href="#" class="nav__logo">
-            Lu<span>Mina</span>
+            Lumina
          </a>
 
-         <div class="nav__menu" id="nav-menu">
+         <div class="" id="nav-menu">
             <ul class="nav__list">
                <li class="nav__item">
                   <a href="#home" class="nav__link active-link">Home</a>
@@ -47,6 +72,18 @@
                <li class="nav__item">
                   <a href="#products" class="nav__link">Products</a>
                </li>
+
+               <li class="nav__item">
+                  <a href="product_more.html" class="nav__link">Product Search</a>
+               </li>
+
+
+               <div class="nav__item d-flex align-items-center" id="cart-nav-item" style="display:flex;">
+                          Cart 
+                        <span class=" nav__item" id="cart-count">0</span>  
+               </div>
+
+
             </ul>
 
             <!-- Close button -->
@@ -63,7 +100,54 @@
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line"></i>
             </div>
+
          </div>
+
+
+      <!--
+         <li class="nav__item before_login" hidden>
+            <div class="profile">
+                  <div class="user">
+                     <h3 id="dropdown-profile-name"> <span id="dropdown-profile-name"></span> </h3>
+                     <p class="" ></p>
+                  </div>
+                  <div class="img-box">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/anonymous.png" alt="some user image">
+                  </div>
+            </div>
+            <div class="menu">
+                  <ul>
+                     <li><a href="#"><i class="ph-bold ph-user"></i>&nbsp;Login</a></li>
+                     <li><a href="#"><i class="ph-bold ph-gear-six"></i>&nbsp;Register</a></li>
+                  </ul>
+            </div>
+         </li>
+          -->
+
+      
+      
+         <li class="nav__item after_login" >
+            <div class="profile">
+                  <div class="user">
+                     <h3 id="dropdown-profile-name"> <span id="dropdown-profile-name"></span> </h3>
+                     <p class="" >@aslan</p>
+                  </div>
+                  <div class="img-box">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/man4.png" alt="some user image">
+                  </div>
+            </div>
+            <div class="menu">
+                  <ul>
+                     <li><a href="#"><i class="ph-bold ph-user"></i>&nbsp;Profile</a></li>
+                     <li><a href="#"><i class="ph-bold ph-envelope-simple"></i>&nbsp;Inbox</a></li>
+                     <li><a href="#"><i class="ph-bold ph-gear-six"></i>&nbsp;Settings</a></li>
+                     <li><a href="#"><i class="ph-bold ph-question"></i>&nbsp;Help</a></li>
+                     <li><a href="#"><i class="ph-bold ph-sign-out"></i>&nbsp;Sign Out</a></li>
+                  </ul>
+            </div>
+         </li>
+
+
       </nav>
    </header>
 
@@ -97,40 +181,41 @@
                </div>
 
                <div class="home__info">
-                  <div>
-                     <h3 class="home__info-title">
-                        9K<span>+</span>
-                     </h3>
-                     <span class="home__info-subtitle">
-                        Premium <br> Product
-                     </span>
-                  </div>
 
-                  <div>
-                     <h3 class="home__info-title">
-                        2K<span>+</span>
-                     </h3>
-                     <span class="home__info-subtitle">
-                        Happy <br> Customer
-                     </span>
-                  </div>
+               <div>
+               <h3 class="home__info-title" id="premiumProductCount">
+                  0<span>+</span>
+               </h3>
+               <span class="home__info-subtitle">
+                  Premium <br> Product
+               </span>
+               </div>
 
-                  <div>
-                     <h3 class="home__info-title">
-                        28<span>+</span>
-                     </h3>
-                     <span class="home__info-subtitle">
-                        Awards <br> Winning
-                     </span>
-                  </div>
+               <div>
+                  <h3 class="home__info-title" id="happyCustomerCount">
+                     0<span>+</span>
+                  </h3>
+                  <span class="home__info-subtitle">
+                     Happy <br> Customer
+                  </span>
+               </div>
+
+               <div>
+                  <h3 class="home__info-title" id="awardWinningCount">
+                     0<span>+</span>
+                  </h3>
+                  <span class="home__info-subtitle">
+                     Awards <br> Winning
+                  </span>
+               </div>
                </div>
             </div>
 
             <div class="home__image">
-               <div class="home__blob">
-                  <img src="<?= base_url('assets/frontend/img/home-lamp.png'); ?>" alt="home image" class="home__img">
+               <div class="home__blob"  >
+                  <img  src="<?= base_url(''); ?>assets/frontend/img/home-lamp.png" alt="home image" class="home__img">
                   <h1 class="home__blob-title">
-                     LIGHT
+                     
                   </h1>
                </div>
 
@@ -142,10 +227,10 @@
       <!--==================== POPULAR ====================-->
       <section class="popular section" id="popular">
          <div class="popular__container container">
-            <div class="popular__data">
+            <div class="popular__data" id="zoom-out" >
                <h2 class="section__title">Popular Product</h2>
 
-               <p class="popular__description">
+               <p class="popular__description split">
                   Find our best products faster and get the
                   quality lights we have for you.
                </p>
@@ -155,81 +240,158 @@
                <div class="swiper-wrapper">
                   <article class="popular__card swiper-slide">
                      <div class="popular__blob">
-                        <img src="<?= base_url('assets/frontend/img/modern-lamp.png'); ?>" alt="popular image" class="popular__img">
+                        <img src="<?= base_url(''); ?>assets/frontend/img/modern-lamp.png" alt="popular image" class="popular__img">
                      </div>
 
                      <h3 class="popular__name">Modern Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>14
+                        <a class="price_">2.140</a> 
+                        <p class="price_before"><span class="price_sign">$</span> 900</p>
+                        <p class="popular__icons">
+                           <i class="ri-bookmark-line"></i>
+                           <i class="ri-heart-line"></i>
+                           <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                           <i class="ri-message-2-line"></i>
+                        </p>
+                        <p class="popular__starts">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-line"></i>
+                        </p>
                      </h3>
 
                      <button class="popular__button">
-                        <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                      </button>
                   </article>
 
                   <article class="popular__card swiper-slide">
                      <div class="popular__blob">
-                        <img src="<?= base_url('assets/frontend/img/industrial-lamp.png'); ?>" alt="popular image" class="popular__img">
+                        <img src="<?= base_url(''); ?>assets/frontend/img/industrial-lamp.png" alt="popular image" class="popular__img">
                      </div>
 
                      <h3 class="popular__name">Industrial Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>20
+                        <a class="price_">2</a> 
+                        <p><span class="price_sign">$</span> 900</p>
+                        <p class="popular__icons">
+                           <i class="ri-bookmark-line"></i>
+                           <i class="ri-heart-line"></i>
+                           <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                           <i class="ri-message-2-line"></i>
+                        </p>
+                        <p class="popular__starts">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-line"></i>
+                        </p>
                      </h3>
 
                      <button class="popular__button">
-                        <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                      </button>
                   </article>
 
                   <article class="popular__card swiper-slide">
                      <div class="popular__blob">
-                        <img src="<?= base_url('assets/frontend/img/superbolw-lamp.png'); ?>" alt="popular image" class="popular__img">
+                        <img src="<?= base_url(''); ?>assets/frontend/img/superbolw-lamp.png" alt="popular image" class="popular__img">
                      </div>
 
                      <h3 class="popular__name">Superbolw Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>18
+                        <a class="price_">1.080</a> 
+                        <p><span class="price_sign">$</span> 900</p>
+                        <p class="popular__icons">
+                           <i class="ri-bookmark-line"></i>
+                           <i class="ri-heart-line"></i>
+                           <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                           <i class="ri-message-2-line"></i>
+                        </p>
+                        <p class="popular__starts">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-line"></i>
+                        </p>
                      </h3>
 
                      <button class="popular__button">
-                        <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                      </button>
                   </article>
 
                   <article class="popular__card swiper-slide">
                      <div class="popular__blob">
-                        <img src="<?= base_url('assets/frontend/img/ultrawide-lamp.png'); ?>" alt="popular image" class="popular__img">
+                        <img src="<?= base_url(''); ?>assets/frontend/img/ultrawide-lamp.png" alt="popular image" class="popular__img">
                      </div>
 
                      <h3 class="popular__name">Ultrawide Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>16
+                        <a class="price_">160</a> 
+                        <p><span class="price_sign">$</span> 900</p>
+
+                        <p class="popular__icons">
+                           <i class="ri-bookmark-line"></i>
+                           <i class="ri-heart-line"></i>
+                           <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                           <i class="ri-message-2-line"></i>
+                        </p>
+                        <p class="popular__starts">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-line"></i>
+                        </p>
                      </h3>
 
                      <button class="popular__button">
-                        <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                      </button>
                   </article>
 
                   <article class="popular__card swiper-slide">
                      <div class="popular__blob">
-                        <img src="<?= base_url('assets/frontend/img/roundness-light.png'); ?>" alt="popular image" class="popular__img">
+                        <img src="<?= base_url(''); ?>assets/frontend/img/roundness-light.png" alt="popular image" class="popular__img">
                      </div>
 
                      <h3 class="popular__name">Roundness Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>17
+                        <a class="price_">170</a> 
+                        <p><span class="price_sign">$</span> 900</p>
+                        <p class="popular__icons">
+                           <i class="ri-bookmark-line"></i>
+                           <i class="ri-heart-line"></i>
+                           <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                           <i class="ri-message-2-line"></i>
+                        </p>
+                        <p class="popular__starts">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-line"></i>
+                        </p>
+
                      </h3>
 
                      <button class="popular__button">
-                        <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                      </button>
                   </article>
                </div>
@@ -251,8 +413,8 @@
          <div class="choose__container container grid">
             <div class="choose__image">
                <div class="choose__blob">
-                  <img src="<?= base_url('assets/frontend/img/choose-lamp.png'); ?>" alt="choose image" class="choose__img">
-                  <h1 class="choose__blob-title">LIGHT</h1>
+                  <img src="<?= base_url(''); ?>assets/frontend/img/choose-lamp.png" alt="choose image" class="choose__img">
+                  <h1 class="choose__blob-title"></h1>
                </div>
 
                <div class="choose__shadow"></div>
@@ -347,8 +509,8 @@
          <div class="features__container container grid">
             <div class="features__image">
                <div class="features__blob">
-                  <img src="<?= base_url('assets/frontend/img/features-lamp.png'); ?>" alt="features image" class="features__img">
-                  <h1 class="features__blob-title">LIGHT</h1>
+                  <img src="<?= base_url(''); ?>assets/frontend/img/features-lamp.png" alt="features image" class="features__img">
+                  <h1 class="features__blob-title"></h1>
                </div>
 
                <div class="features__shadow"></div>
@@ -409,129 +571,235 @@
             <div class="products__content grid">
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/modern-lamp.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/modern-lamp.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Modern Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>14
+                     <a class="price_">140</a> 
+                     <p><span class="price_sign">$</span> 900</p>
+                     <p class="products__icons">
+                        <i class="ri-bookmark-line"></i>
+                        <i class="ri-heart-line"></i>
+                        <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                        <i class="ri-message-2-line"></i>
+                     </p>
+                     <p class="products__starts">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                     </p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
 
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/industrial-lamp.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/industrial-lamp.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Industrial Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>20
+                     <a class="price_">200</a> 
+                     <p><span class="price_sign">$</span> 900</p>
+                     <p class="products__icons">
+                        <i class="ri-bookmark-line"></i>
+                        <i class="ri-heart-line"></i>
+                        <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                        <i class="ri-message-2-line"></i>
+                     </p>
+                     <p class="products__starts">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                     </p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
 
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/superbolw-lamp.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/superbolw-lamp.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Superbolw Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>18
+                     <a class="price_">180</a> 
+                     <p><span class="price_sign">$</span> 900</p>
+                     <p class="products__icons">
+                        <i class="ri-bookmark-line"></i>
+                        <i class="ri-heart-line"></i>
+                        <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                        <i class="ri-message-2-line"></i>
+                     </p>
+                     <p class="products__starts">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                     </p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
 
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/ultrawide-lamp.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/ultrawide-lamp.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Ultrawide Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>16
+                     <a class="price_">160</a> 
+                     <p><span class="price_sign">$</span> 900</p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
 
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/roundness-light.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/roundness-light.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Roundness Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>17
+                     <a class="price_">170</a> 
+                     <p><span class="price_sign">$</span> 900</p>
+                     <p class="products__icons">
+                        <i class="ri-bookmark-line"></i>
+                        <i class="ri-heart-line"></i>
+                        <i class="ri-share-line"></i>
+                        <i class="ri-eye-line"></i>
+                        <i class="ri-message-2-line"></i>
+                     </p>
+                     <p class="products__starts">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                     </p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
 
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/stickness-light.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/stickness-light.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Stickness Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>28
+                     <a class="price_">280</a> 
+                     <p><span class="price_sign">$</span> 900</p>
+                     <p class="products__icons">
+                        <i class="ri-bookmark-line"></i>
+                        <i class="ri-heart-line"></i>
+                        <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                        <i class="ri-message-2-line"></i>
+                     </p>
+                     <p class="products__starts">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                     </p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
 
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/superjet-light.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/superjet-light.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Superjet Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>15
+                     <a class="price_">150</a> 
+                     <p><span class="price_sign">$</span> 900</p>
+                     <p class="products__icons">
+                        <i class="ri-bookmark-line"></i>
+                        <i class="ri-heart-line"></i>
+                        <i class="ri-share-line"></i>
+                           <a href="product_detail.html" ><i class="ri-eye-line"></i></a> 
+                        <i class="ri-message-2-line"></i>
+                     </p>
+                     <p class="products__starts">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                     </p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
 
                <article class="products__card">
                   <div class="products__blob">
-                     <img src="<?= base_url('assets/frontend/img/nakedness-lamp.png'); ?>" alt="products image" class="products__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/nakedness-lamp.png" alt="products image" class="products__img">
                   </div>
 
                   <h3 class="products__name">Nakedness Light</h3>
                   <span class="products__subtitle">Hanging Light</span>
                   <h3 class="products__price">
-                     <span>$</span>10
+                     <a class="price_">100</a> 
+                     <p><span class="price_sign">$</span> 900</p>
+                     <p class="products__icons">
+                        <i class="ri-bookmark-line"></i>
+                        <i class="ri-heart-line"></i>
+                        <i class="ri-share-line"></i>
+                        <button type=""><i class="ri-eye-line"></i></button> 
+                        <i class="ri-message-2-line"></i>
+                     </p>
+                     <p class="products__starts">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                     </p>
                   </h3>
 
                   <button class="products__button">
-                     <i class="ri-add-line"></i>
+                        <i class="ri-shopping-cart-2-line"></i>
                   </button>
                </article>
             </div>
@@ -544,7 +812,7 @@
             <div class="join__bg grid">
                <div class="join__image">
                   <div class="join__blob">
-                     <img src="<?= base_url('assets/frontend/img/join-lamp.png'); ?>" alt="join image" class="join__img">
+                     <img src="<?= base_url(''); ?>assets/frontend/img/join-lamp.png" alt="join image" class="join__img">
                      <h1 class="join__blob-title">LIGHT</h1>
                   </div>
 
@@ -580,7 +848,7 @@
          <div class="footer__content grid">
             <div>
                <a href="#" class="footer__logo">
-                  SUN<span>LIGHT</span>
+                  Lumina
                </a>
 
                <div class="footer__description">
@@ -614,7 +882,7 @@
 
                   <ul class="footer__links">
                      <li>
-                        <a href="#" class="footer__link">What Sunlight</a>
+                        <a href="#" class="footer__link">What Lumina</a>
                      </li>
 
                      <li>
@@ -680,13 +948,115 @@
    </a>
 
    <!--=============== SCROLLREVEAL ===============-->
-   <script src="<?= base_url('assets/frontend/js/scrollreveal.min.js'); ?>"></script>
+   <script src="<?= base_url(''); ?>assets/frontend/js/scrollreveal.min.js"></script>
 
    <!--=============== SWIPER JS ===============-->
-   <script src="<?= base_url('assets/frontend/swiper-bundle.min.js'); ?>"></script>
+   <script src="<?= base_url(''); ?>assets/frontend/js/swiper-bundle.min.js"></script>
 
    <!--=============== MAIN JS ===============-->
-   <script src="<?= base_url('assets/frontend/js/main.js'); ?>"></script>
+   <script src="<?= base_url(''); ?>assets/frontend/js/main.js"></script>
+
+
+<script>
+  function countTo(target, end, duration) {
+    const element = document.getElementById(target);
+    const start = 0;
+    const range = end - start;
+    const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / range));
+
+    let current = start;
+
+    const interval = setInterval(() => {
+      current += increment;
+      element.textContent = current + "+";
+
+      if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+        clearInterval(interval);
+      }
+    }, stepTime);
+  }
+
+  window.onload = function () {
+    countTo("premiumProductCount", 210, 100); // 2000 milliseconds (2 seconds) duration
+    countTo("happyCustomerCount", 9500, 1000); // 2000 milliseconds (2 seconds) duration
+    countTo("awardWinningCount", 9500, 100); // 2000 milliseconds (2 seconds) duration
+  };
+</script>
+
+
+
+<!-- ==================================  GSAP -->
+
+
+  <!-- Ionicons Usage -->
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <!-- ScrollMagic CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" integrity="sha512-xAxjKW1J/R4TFytv43xvQ7jFTrJlBzsDOH/Aw0fFc2nvarQkE3d08lTicjzUsZJYDoHYDCpwsUUqOJXh34A1sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/PixiPlugin.min.js" integrity="sha512-n5YlUC0L2bmI5Bt2yZKgnLlJpgPQCeaE2KKgBfgAJ53c6h4MeZA96Vs5QKND27owYmIIfOsYGF2BPM3VW3CN3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js" integrity="sha512-pLJlXRr/H5t+k+Tjc+Qe0Z6u6psPak7rvYBdsZ0Z+kG84jn/zifMNTQBZKZlwZC1z23bifGoQWzGnI0eWBJKPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EaselPlugin.min.js" integrity="sha512-i5d9zswMBppmXShWCFABEr9WqUMmD55mQ1u7PA7eXqdtd+HAD8Pe76SwWwkXRH7d3t9Xqv3fWi3jhlvNsKYDQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js" integrity="sha512-G7Wpe/pbg+zjyyM9HgQY6kacLAy+580lmA8DUXmZtioTI5FkaCRoLOaCLoeblrZABs7KZFD03cfSV9j7nmwxfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js" integrity="sha512-4a56NRIrhn/ePBdSSNfwsmL+eZt/uCXEb7s+3B8tg/tDiywDMKb5u2QCdhsYQtEkUMPGE5GUVbZYqgKeRzJ7yQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js" integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  const { innerHeight } = window;
+
+   gsap.from('#zoom-out h2',{
+      scale:10,stager:0.10, duration: 1,
+      scrollTrigger : {
+         trigger: "#zoom-out h2",
+         pin:false,
+         end:`+=${innerHeight * 0.7}`,
+         scrub:5
+      }
+   });
+
+   gsap.to('#zoom-in h2',{
+      scale:5,stager:0.10, duration: 1,
+      scrollTrigger : {
+         trigger: "#zoom-in h2",
+         pin:false,
+         end:`+=${innerHeight * 0.7}`,
+         scrub:5
+      }
+   }); 
+
+
+</script>
+
+
+<script>
+   import gsap  from "gsap-trial";
+   import { SplitText } from "gsap-trial/SplitText";
+   import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
+
+   gsap.registerPlugin(SplitText);
+
+   let mySplitText = new SplitText(".split",{type:"chars"})
+
+   let chars = mySplitText.chars 
+
+   gsap.from(chars, {
+      yPercent:130;,
+      stagger:0.05
+   })
+
+</script>
+
+
+<!-- ================================== END GSAP -->
+
+
 </body>
 
 </html>
