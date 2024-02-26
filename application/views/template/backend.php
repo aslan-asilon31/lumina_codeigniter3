@@ -178,8 +178,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="<?= base_url()?>assets/backend/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <img src="<?= base_url()?>assets/frontend/img/favicon.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Dashboard ERP</span>
     </a>
 
     <!-- Sidebar -->
@@ -187,10 +187,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url()?>assets/backend/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url()?>assets/frontend/img/man4.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Sulaslan Setiawan</a>
         </div>
       </div>
 
@@ -212,107 +212,787 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?= site_url()?>/dashboard" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="dashboard-erp.html" class="nav-link">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= site_url()?>/user" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                User
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?= site_url()?>/transaction" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Transaction
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?= site_url()?>/order" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Order
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="nav-icon fa fa-book"></i>
               <p>
-                Master Data
-                <i class="right fas fa-angle-left"></i>
+                Catalog
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?= site_url('catalog_product') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>ChartJS</p>
+                  <p>Products</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Bank Master</p>
+                  <p>Categories</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="l" class="nav-link">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Brand Master</p>
+                  <p>Manufacturers</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Category Master</p>
+                  <p>Product Reviews</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Department Master</p>
+                  <p>Product Tags</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Image Master</p>
+                  <p>
+                    Attributes
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Product Attributes</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Spesification Attributes</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Checkout Attributes</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Sales
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Orders</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pages/forms/advanced.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Price Master</p>
+                  <p>Shipments</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pages/forms/editors.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Region Master</p>
+                  <p>Return Requests</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pages/forms/validation.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Roles Master</p>
+                  <p>Recurring Payments</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pages/forms/validation.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Status Master</p>
+                  <p>Gift Cards</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Shopping Carts and Wishlist</p>
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Customers
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customer Roles</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Online Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Vendors</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Type</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>GDPR Requests (log) </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Promotions
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Discounts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Affiliates</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Newsletter Subscribers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Campaigns</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Type</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>GDPR Requests (log) </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Content Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Topics (Pages)</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Message Templates</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>News Items</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>News Comments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blog Posts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blog Comments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Polls </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Forums </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Configuration
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Settings
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>General Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customer Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Order Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Shipping Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Catalog Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Shopping Cart Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Reward Points</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>GDPR Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Vendor Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Blog Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>News Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Forum Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Media Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>All Settings (Advances)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Email Accounts</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Stores</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Countries</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Languages</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Currencies</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Payment Methods</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Payment Restrictions</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Providers</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Categories</p>
+                    </a>
+                  </li>
+                  
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        Shipping
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Shipping Providers</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Warehouses</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Pickup Points</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Dates and Ranges</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Measures</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        POS
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>PayPal Zettle</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Accesss control list</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Widgets</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>
+                            Authentication
+                            <i class="fas fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>External Authentication</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Multi-factor Authentication</p>
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Web API</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Local Plugins</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>All Plugins and Themes</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manufacturers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Reviews</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Tags</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                System
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>System Informastion</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Warnings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Maintenance</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Message Queue</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Schedule Tasks</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Search Engine Friendly Pages Names</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Templates</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Reports
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sales Summary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Low Stock</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Bestsellers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product never purchased</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Country Sales</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Customer Reports
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Registered Customer</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customerby order total</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customer by number of order</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Help
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Training</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Documentation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Community Forums</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Premium Support Services</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Solution Partners</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Sign Out
+              </p>
+            </a>
           </li>
 
         </ul>

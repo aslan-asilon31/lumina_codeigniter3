@@ -23,19 +23,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = ''; 
+$config['base_url'] = 'http://localhost:8081/lumina_codeigniter3/'; 
 
-// Get the protocol (http or https)
-$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
 
-// Get the host
-$host = $_SERVER['HTTP_HOST'];
+// // Get the protocol (http or https)
+// $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
 
-// Get the base path
-$basePath = str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+// // Get the host
+// $host = $_SERVER['HTTP_HOST'];
 
-// Combine the above to create the base URL
-$config['base_url'] = $protocol . "://" . $host . $basePath;
+// // Get the base path
+// $basePath = str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+
+// // Combine the above to create the base URL
+// $config['base_url'] = $protocol . "://" . $host . $basePath;
 
 
 /*
@@ -48,7 +49,7 @@ $config['base_url'] = $protocol . "://" . $host . $basePath;
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

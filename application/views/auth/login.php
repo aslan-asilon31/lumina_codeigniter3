@@ -1,51 +1,57 @@
-
-
-        <!-- Start Body -->
-        <div class="content-wrapper">
-            <div class="sub-main">
-                <h2 class="sub-heading"> Login to our site</h2>
-                <div class="login-social">
-                    <p class="span line-left">With social media account.</p>
-                    <div class="social-icons">
-                        <div class="button">
-                            <a class="tw" href="#"> <i class="fa fa-twitter anc-tw"> </i> <span>Twitter</span><div class="clear"> </div></a>
-                            <a class="fb" href="#"> <i class="fa fa-facebook anc-fa"> </i> <span>Facebook</span><div class="clear"> </div></a>
-                            <a class="go" href="#"><i class="fa fa-google-plus anc-go"> </i><span>Google+</span><div class="clear"> </div></a>
-                            <div class="clear"></div>
-                        </div>
+<img class="wave" src="<?= base_url()?>assets/auth-page/img/wave-purple.svg">
+    <div class="container">
+        <div class="img">
+            <!-- <img src="<?= base_url()?>assets/auth-page/img/authentication-purple.svg"> -->
+            <img src="<?= base_url()?>assets/auth-page/img/auth-3d-purple/1.png">
+        </div>
+        <div class="login-container">
+            <form action="<?= site_url('login/process_login') ?>" method="post">
+                <h2>Login</h2>
+                <p>Welcome !</p>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <input class="input" name="email" type="email" placeholder="email">
                     </div>
                 </div>
-                <div class="line-mid">
-                    <h4>or</h4>
-                    <div class="clear"></div>
+                <div class="input-div two">
+                    <div class="i">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div>
+                        <input class="input" name="password" type="password" placeholder="password">
+                    </div>
                 </div>
-
-                <!--login start here-->
-                <div class="login">
-                    <p class="span line-left">Enter your email and password.</p>
-                    <form action="<?= site_url()?>/dashboard" method="post">
-                        <input type="text" class="user active" value="User name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
-                        <input type="password" class="lock active" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
-                        <div class="forgot">
-                            <div class="login-check">
-                                <input type="checkbox" id="brand1" value="">
-                                <label for="brand1"><span></span>Keep me Signed in</label>
-                            </div>
-                            <a href="<?= site_url()?>login/reset"> Forgot Password? </a>
-                            <div class="clear"> </div>
-                        </div>
-                        <div class="login-bwn">
-                            <input type="submit" value="Log in" />
-                        </div>
-
-                        <div class="login-bottom" >
-                            <h4 style="color:white;font-weight:bolder;">Don't have an Account?</h4>
-                            <div class="reg-bwn"><a href="<?= site_url()?>/login/register">Register Now!</a></div>
-                        </div>
-                    </form>
+                <input type="submit" class="btn" value="Login">
+                <a class="forgot" href="<?= site_url('register') ?>">Don't have an acount ? , Click here to Register</a>
+                <div class="others">
+                    <hr>
+                    <p>OR</p>
+                    <hr>
                 </div>
-                <!--login end here-->
-            </div>
-
+                <div class="social">
+                    <div class="social-icons google">
+                        <a href="#"><img src="<?= base_url()?>assets/auth-page/img/3d-icon/3d-icon-gmail.png">Login with Google</a>
+                    </div>
+                    <div class="social-icons facebook">
+                        <a href="#"><img src="<?= base_url()?>assets/auth-page/img/3d-icon/3d-icon-facebook.png">Login with Facebook</a>
+                    </div>
+                    <div class="social-icons github">
+                        <a href="#"><img src="<?= base_url()?>assets/auth-page/img/3d-icon/3d-icon-github.png">Login with Github</a>
+                    </div>
+                    <div class="social-icons twitter">
+                        <a href="#"><img src="<?= base_url()?>assets/auth-page/img/3d-icon/3d-icon-twitter.png">Login with Twitter</a>
+                    </div>
+                    <div class="social-icons discord">
+                        <a href="#"><img src="<?= base_url()?>assets/auth-page/img/3d-icon/3d-icon-discord.png">Login with Discord</a>
+                    </div>
+                </div>
+                <div class="account">
+                    <p>Forgot Password ?</p>
+                    <a href="<?= site_url('login/forgotpassword') ?>">Click Here</a>
+                </div>
+            </form>
         </div>
-        <!-- End Body -->
+    </div>
